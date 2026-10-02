@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Course {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String?
+  createdAt   DateTime @default(now())
+
+  lessons Lesson[]
+}
+
+model Lesson {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String?
+  isCompleted Boolean  @default(false)
+  createdAt   DateTime @default(now())
+
+  courseId Int
+  course   Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
+}

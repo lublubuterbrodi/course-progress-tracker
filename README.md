@@ -14,6 +14,13 @@ A full-stack web application for creating courses, organizing lessons, and track
 
 Users can create courses, add lessons, mark lessons as completed, and see their progress update automatically.
 
+## Live Demo
+
+🌐 **[View Live Demo](https://course-progress-demo.vercel.app/)**
+
+> The live demo is a standalone frontend version of the application using mock data and browser `localStorage`.
+> The full version in this repository uses an Express REST API, Prisma ORM, PostgreSQL, and Docker.
+
 ## Features
 
 - Create and delete courses
